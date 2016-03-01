@@ -34,13 +34,13 @@ logging:
 ## global options
 ## --------------
 options:
-  service-uri: 's3.example.com'
+  service-uri: 'cdn.hellobus.com.br'
   reporting: true
   server-side-encryption: true
   multipart-upload: true
   masterkey-provisioning: true
   masterkey-access: true
-  default-region: 'CH-GV1'
+  default-region: 'DC02-RC02'
 
 
 ## keystore configuration
@@ -52,19 +52,19 @@ options:
 # They may offer provisioning capacities with the
 # masterkey. The default provider relies on keys
 # being defined inline.
-keystore:
-  keys:
-    AKIAIOSFODNN7EXAMPLE:
+# keystore:
+#  keys:
+#    AKIAIOSFODNN7EXAMPLE:
 # The master key allows provisinning operations
 # when the masterkey-provisioning feature is
 # set to true and will allow access to all
 # buckets when masterkey-access is set to true
-      master: true
-      tenant: 'pyr@spootnik.org'
-      secret: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
-    BKIAIOSFODNN7EXAMPLE:
-      tenant: 'exoscale'
-      secret: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+#      master: true
+#      tenant: 'pyr@spootnik.org'
+#      secret: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
+#    BKIAIOSFODNN7EXAMPLE:
+#      tenant: 'exoscale'
+#      secret: 'wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY'
 
 
 ## bucketstore configuration
@@ -78,7 +78,7 @@ keystore:
 #
 # The default provider relies on cassandra.
 bucketstore:
-  default-region: 'CH-GV1'
+  default-region: 'DC02-RC02'
   cluster: 'cassandra'
   keyspace: 'storage'
 
